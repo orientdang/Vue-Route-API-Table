@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Users List</h1>
-        <router-link :to="{path: `/`}"> <- Back to home</router-link>
+        <router-link :to="{path: `/`}">  Back to home</router-link>
         <b-list-group>
             <b-list-group-item
                 :to="{ path: `/user/${user.id}` }"
@@ -10,7 +10,7 @@
                 variant="primary"
                 v-for="(user,index) in users"
                 :key="index"
-            >User {{user.id}}</b-list-group-item>
+            >{{user.name}}</b-list-group-item>
         </b-list-group>
     </div>
 </template>
