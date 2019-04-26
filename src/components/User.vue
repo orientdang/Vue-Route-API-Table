@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Users List</h1>
-        <!-- <router-link to="/1">asd</router-link>-->
+        <router-link :to="{path: `/`}"> <- Back to home</router-link>
         <b-list-group>
             <b-list-group-item
                 :to="{ path: `/user/${user.id}` }"
