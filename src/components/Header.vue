@@ -3,9 +3,9 @@
         <b-navbar
             toggleable="lg"
             type="dark"
-            variant="info"
+            variant="warning"
         >
-            <b-navbar-brand href="#">Home</b-navbar-brand>
+            <b-navbar-brand to="/">Home</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -14,9 +14,10 @@
                 is-nav
             >
                 <b-navbar-nav>
-                    <b-nav-item href="#">Form</b-nav-item>
-                    <b-nav-item href="#">Table</b-nav-item>
-                    <b-nav-item href="#">User</b-nav-item>
+                    <b-nav-item to="/form">Form</b-nav-item>
+                    <b-nav-item to="/table">Table</b-nav-item>
+                    <b-nav-item to="/table">User</b-nav-item>
+                    <b-nav-item to="/user">User</b-nav-item>
                 </b-navbar-nav>
 
                 <!-- Right aligned nav items -->
