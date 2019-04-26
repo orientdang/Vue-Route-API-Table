@@ -16,7 +16,6 @@
                 <b-navbar-nav>
                     <b-nav-item to="/form">Form</b-nav-item>
                     <b-nav-item to="/table">Table</b-nav-item>
-                    <b-nav-item to="/table">User</b-nav-item>
                     <b-nav-item to="/user">User</b-nav-item>
                 </b-navbar-nav>
 

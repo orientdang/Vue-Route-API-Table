@@ -2,6 +2,8 @@ import Home from './components/Home'
 import Form from './components/Form'
 import Header from './components/Header'
 import Table from './components/Table'
+import User from './components/User'
+import UserDetail from './components/UserDetail'
 
 
 
@@ -25,6 +27,20 @@ export const routes = [
             default: Table,
             'header-top': Header
         }
+    },
+    {
+        path: '/user', name: 'user', components: {
+            default: User,
+            'header-top': Header
+        }
+    },
+    {
+        path: '/user/:id', name: 'table', components: {
+            default: UserDetail,
+            'header-top': Header
+        },children:[
+            {path: 'profile', redirect: {name: 'home'}}
+        ]
     },
     // {
     //     path: '/user', components: {
