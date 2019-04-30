@@ -32,11 +32,11 @@
 import firebase from "firebase";
 export default {
     name: "logout",
-    
+
     data() {
         return {
             isLoggedIn: false,
-            currentUser: ''
+            currentUser: ""
         };
     },
     created() {
@@ -51,7 +51,7 @@ export default {
     methods: {
         logOut() {
             console.log(`signOut`);
-            this.currentUser = '';
+            this.currentUser = "";
             firebase
                 .auth()
                 .signOut()

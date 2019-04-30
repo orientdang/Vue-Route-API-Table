@@ -45,7 +45,6 @@ router.beforeEach((to, from, next) => {
     }
   } else if (to.matched.some((record) => record.meta.requiresGuest)) {
     if (firebase.auth().currentUser) {
-      // go to login
       next({
         path: '/',
         query: {
