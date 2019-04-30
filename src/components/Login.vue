@@ -8,8 +8,14 @@
 
             <label class="sr-only">Pass</label>
 
-            <b-input v-model="pass" type="password" placeholder="Password" class="mb-3"></b-input>
-            
+            <b-input
+                @keyup.enter="login($event)"
+                v-model="pass"
+                type="password"
+                placeholder="Password"
+                class="mb-3"
+            ></b-input>
+
             <b-button variant="outline-danger" to="/register" class="mr-5">Register</b-button>
             <b-button variant="primary" @click="login($event)">Login</b-button>
         </b-form>
@@ -34,7 +40,7 @@ export default {
                 .then(user => {
                     alert(`You logged in with ${this.username}`);
                     // re-render the whole pages
-                    this.$router.go({path: this.$router.path});
+                    this.$router.go({ path: this.$router.path });
                 })
                 .catch(err => {
                     alert(err.message);
