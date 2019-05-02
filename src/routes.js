@@ -6,7 +6,7 @@ import User from './components/User'
 import UserDetail from './components/UserDetail'
 import Login from './components/Login'
 import Register from './components/Register'
-
+import Footer from './components/Footer'
 
 export const routes = [
     {
@@ -14,7 +14,8 @@ export const routes = [
         name: 'home',
         components: {
             default: Home,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         },
         meta: {
             requiresAuth: true,
@@ -24,7 +25,8 @@ export const routes = [
     {
         path: '/form', name: 'form', components: {
             default: Form,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         },
         meta: {
             requiresAuth: true,
@@ -34,7 +36,8 @@ export const routes = [
     {
         path: '/table', name: 'table', components: {
             default: Table,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         },
         meta: {
             requiresAuth: true,
@@ -44,7 +47,8 @@ export const routes = [
     {
         path: '/user', name: 'user', components: {
             default: User,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         },
         meta: {
             requiresAuth: true,
@@ -54,7 +58,8 @@ export const routes = [
     {
         path: '/login', name: 'login', components: {
             default: Login,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         },
         meta: {
             requiresGuest: true
@@ -63,7 +68,8 @@ export const routes = [
     {
         path: '/register', name: 'register', components: {
             default: Register,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         },
         meta: {
             requiresGuest: true
@@ -72,7 +78,8 @@ export const routes = [
     {
         path: '/user/:id', name: 'user-detail', components: {
             default: UserDetail,
-            'header-top': Header
+            'header-top': Header,
+            'header-bottom': Footer
         }, children: [
             { path: 'profile', redirect: { name: 'home' } }
         ],
