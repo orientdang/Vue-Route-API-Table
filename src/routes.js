@@ -7,6 +7,7 @@ import UserDetail from './components/UserDetail'
 import Login from './components/Login'
 import Register from './components/Register'
 import Footer from './components/Footer'
+import NotFound from './components/NotFound';
 
 export const routes = [
     {
@@ -88,23 +89,11 @@ export const routes = [
             requiresGuest: false
         }
     },
-    // {
-    //     path: '/user', components: {
-    //         default: User,
-    //         'header-top': Header,
-    //         'header-bottom': Header
-    //     }, children: [
-    //         { path: '', component: UserStart },
-    //         { path: ':id', component: UserDetail },
-    //         { path: ':id/edit', component: UserEdit, name: 'userEdit' }
-    //     ]
-    // },
-    // { path: '/redirect-me', redirect: { name: 'home' } },
-    // {
-    //     path: '/not-found', name: 'notfound', components: {
-    //         default: NotFound,
-    //         'header-top': Header
-    //     }
-    // },
-    { path: '*', redirect: '/not-found' }
+    {
+        path: '/not-found', name: 'notfound', components: {
+            default: NotFound,
+            'header-top': Header
+        }
+    },
+    { path: '*', redirect: {name: 'notfound'} }
 ];

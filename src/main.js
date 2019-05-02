@@ -11,13 +11,15 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
+// firebase config
 firebase.initializeApp(FirebaseConfig);
+// routes
 const router = new VueRouter({
   routes,
   mode: 'history'
 });
-let app;
 //  check current user
+let app;
 firebase.auth().onAuthStateChanged(user => {
   if (!app) {
     app = new Vue({
@@ -43,7 +45,8 @@ router.beforeEach((to, from, next) => {
     } else {
       next();
     }
-  } else if (to.matched.some((record) => record.meta.requiresGuest)) {
+  } else if (to.matched.some((record) => record.meta.requiresGuest)) { //check requiresGuest
+    // if logged, cant access route '/login'
     if (firebase.auth().currentUser) {
       next({
         path: '/',

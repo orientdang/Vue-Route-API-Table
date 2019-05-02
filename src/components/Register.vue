@@ -4,13 +4,26 @@
 
         <b-form class="login-form">
             <label class="sr-only">Username</label>
-            <b-input v-model="username" type="text" class="mb-3" placeholder="User name"></b-input>
+            <b-input
+                v-model="username"
+                type="text"
+                class="mb-3"
+                placeholder="User name"
+            ></b-input>
 
             <label class="sr-only">Pass</label>
 
-            <b-input v-model="pass" type="password" placeholder="Password" class="mb-3"></b-input>
+            <b-input
+                v-model="pass"
+                type="password"
+                placeholder="Password"
+                class="mb-3"
+            ></b-input>
 
-            <b-button variant="primary" @click="register($event)">Register</b-button>
+            <b-button
+                variant="primary"
+                @click="register($event)"
+            >Register</b-button>
         </b-form>
     </div>
 </template>
